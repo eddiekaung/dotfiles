@@ -1,4 +1,7 @@
 syntax enable		" enable syntax processing
+filetype plugin on
+set nocompatible
+
 set t_Co=256            " request terminal to use 256 colors
 set tabstop=8		" number of visual spaces per tab
 set softtabstop=4	" number of spaces in tab when editing
@@ -35,3 +38,11 @@ call plug#end()
 
 map <C-o> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+
+set path+=**            " Fuzzy finder
+
+" Remapping for navigation between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
