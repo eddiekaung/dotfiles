@@ -19,6 +19,10 @@ set laststatus=2        " Show status line on startup
 set splitright          " Open new splits to the right
 set splitbelow          " Open new splits to the bottom
 set showcmd             " Show size of visual selection
+set ignorecase
+set smartcase
+" set binary		" No new line at the end of file
+" set noeol
 " Showcase comments in italics
 highlight Comment cterm=italic gui=italic
 set background=dark
@@ -33,6 +37,8 @@ set background=dark
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'gabrielelana/vim-markdown'
 call plug#end()
 
 
@@ -46,3 +52,5 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+let g:markdown_enable_spell_checking = 0
